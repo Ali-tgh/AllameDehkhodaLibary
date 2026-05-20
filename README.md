@@ -21,4 +21,4 @@
 ## نصب و اجرا
 1. مخزن را کلون کنید
 ```bash
-git clone https://github.com/YourUsername/AllamehDehkhodaLibary.git
+https://github.com/Ali-tgh/AllameDehkhodaLibary.git
