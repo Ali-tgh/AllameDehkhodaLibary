@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AllameDehkhoda.Application/AllameDehkhoda.Application.csproj" />
+  <Project Path="AllameDehkhoda.Domain/AllameDehkhoda.Domain.csproj" />
+  <Project Path="AllameDehkhoda.Infrastructure/AllameDehkhoda.Infrastructure.csproj" />
+  <Project Path="AllameDehkhoda.Presentation/AllameDehkhoda.Presentation.csproj" />
+</Solution>

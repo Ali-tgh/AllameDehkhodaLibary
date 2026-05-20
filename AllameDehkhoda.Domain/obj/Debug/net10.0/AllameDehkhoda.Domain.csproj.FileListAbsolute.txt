@@ -1,0 +1,11 @@
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\bin\Debug\net10.0\AllameDehkhoda.Domain.deps.json
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\bin\Debug\net10.0\AllameDehkhoda.Domain.dll
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\bin\Debug\net10.0\AllameDehkhoda.Domain.pdb
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\obj\Debug\net10.0\AllameDehkhoda.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\obj\Debug\net10.0\AllameDehkhoda.Domain.AssemblyInfoInputs.cache
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\obj\Debug\net10.0\AllameDehkhoda.Domain.AssemblyInfo.cs
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\obj\Debug\net10.0\AllameDehkhoda.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\obj\Debug\net10.0\AllameDehkhoda.Domain.dll
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\obj\Debug\net10.0\refint\AllameDehkhoda.Domain.dll
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\obj\Debug\net10.0\AllameDehkhoda.Domain.pdb
+C:\Users\Ali\Desktop\C#-Projrct\AllameDehkhoda\AllameDehkhoda.Domain\obj\Debug\net10.0\ref\AllameDehkhoda.Domain.dll
