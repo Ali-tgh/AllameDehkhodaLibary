@@ -8,7 +8,6 @@
 [![EF Core](https://img.shields.io/badge/EF%20Core-Latest-512BD4?style=flat-square&logo=dotnet)](https://learn.microsoft.com/ef/core/)
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
 [![WinForms](https://img.shields.io/badge/WinForms-0078D4?style=flat-square&logo=windows)](https://learn.microsoft.com/dotnet/desktop/winforms/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 </div>
 
