@@ -8,6 +8,7 @@
 [![EF Core](https://img.shields.io/badge/EF%20Core-Latest-512BD4?style=flat-square&logo=dotnet)](https://learn.microsoft.com/ef/core/)
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
 [![WinForms](https://img.shields.io/badge/WinForms-0078D4?style=flat-square&logo=windows)](https://learn.microsoft.com/dotnet/desktop/winforms/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 </div>
 
@@ -27,48 +28,20 @@
 
 ## 🏗️ معماری پروژه
 
-این پروژه از **Onion Architecture** پیروی می‌کند که وابستگی‌ها همیشه به سمت داخل (Domain) هستند:
+پروژه از **Onion Architecture** استفاده می‌کنه — هر لایه فقط به لایه داخلی‌تر وابسته‌ست:
 
-```mermaid
-graph TD
-    subgraph PRE["🖥️ Presentation — WinForms UI"]
-        P1[Form1 - فرم اصلی]
-        P2[FrmBook - کتاب‌ها]
-        P3[FrmMember - اعضا]
-        P4[FrmBorrow - امانت]
-        P5[FrmReport - گزارش‌گیری]
-    end
-
-    subgraph APP["⚙️ Application — Business Logic"]
-        A1[BookService]
-        A2[BorrowService]
-        A3[MemberService]
-        A4[CategoryService]
-        A5[DTOs]
-        A6[ServiceResult]
-    end
-
-    subgraph INF["🗄️ Infrastructure — EF Core / SQL Server"]
-        I1[AppDbContext]
-        I2[Repositories]
-        I3[Configs - Fluent API]
-        I4[Migrations]
-    end
-
-    subgraph DOM["🧩 Domain — Core"]
-        D1[Entities\nBook · Member · Borrow · Category]
-        D2[Interfaces\nIRepository · IBookRepository\nIBorrowRepository · IMemberRepository]
-    end
-
-    PRE -->|calls| APP
-    APP -->|depends on| DOM
-    INF -->|implements| DOM
-    PRE -.->|DI| INF
-
-    style DOM fill:#f3f0ff,stroke:#7c3aed,color:#3b1fa8
-    style APP fill:#f0fdf4,stroke:#16a34a,color:#14532d
-    style INF fill:#fffbeb,stroke:#d97706,color:#78350f
-    style PRE fill:#fff1f2,stroke:#e11d48,color:#881337
+```
+┌─────────────────────────────────────────┐
+│         Presentation (WinForms)         │
+│  Form1 · FrmBook · FrmMember · FrmBorrow│
+├─────────────────────────────────────────┤
+│              Application                │
+│     Services · DTOs · ServiceResult     │
+├──────────────────┬──────────────────────┤
+│  Infrastructure  │                      │
+│  EF Core · Repos │      Domain          │
+│  AppDbContext    │  Entities · IRepos   │
+└──────────────────┴──────────────────────┘
 ```
 
 ---
