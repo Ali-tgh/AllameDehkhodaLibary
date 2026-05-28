@@ -3,7 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DECF4FED-8FD8-85E1-BCA2-E8D50863B603}|AllameDehkhoda.Presentation\\AllameDehkhoda.Presentation.csproj|c:\\users\\ali\\desktop\\c#-projrct\\allamedehkhoda\\allamedehkhoda.presentation\\frmmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DFCF39E1-F33C-52D9-360A-3C2CF494615B}|AllameDehkhoda.Infrastructure\\AllameDehkhoda.Infrastructure.csproj|c:\\users\\ali\\desktop\\c#-projrct\\allamedehkhoda\\allamedehkhoda.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFCF39E1-F33C-52D9-360A-3C2CF494615B}|AllameDehkhoda.Infrastructure\\AllameDehkhoda.Infrastructure.csproj|solutionrelative:allamedehkhoda.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C05C35F5-2962-A6C8-6D4E-928980D30628}|AllameDehkhoda.Application\\AllameDehkhoda.Application.csproj|c:\\users\\ali\\desktop\\c#-projrct\\allamedehkhoda\\allamedehkhoda.application\\common\\bookmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C05C35F5-2962-A6C8-6D4E-928980D30628}|AllameDehkhoda.Application\\AllameDehkhoda.Application.csproj|solutionrelative:allamedehkhoda.application\\common\\bookmessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DECF4FED-8FD8-85E1-BCA2-E8D50863B603}|AllameDehkhoda.Presentation\\AllameDehkhoda.Presentation.csproj|c:\\users\\ali\\desktop\\c#-projrct\\allamedehkhoda\\allamedehkhoda.presentation\\common\\uihelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DECF4FED-8FD8-85E1-BCA2-E8D50863B603}|AllameDehkhoda.Presentation\\AllameDehkhoda.Presentation.csproj|solutionrelative:allamedehkhoda.presentation\\common\\uihelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DECF4FED-8FD8-85E1-BCA2-E8D50863B603}|AllameDehkhoda.Presentation\\AllameDehkhoda.Presentation.csproj|c:\\users\\ali\\desktop\\c#-projrct\\allamedehkhoda\\allamedehkhoda.presentation\\common\\datetimefuncs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DECF4FED-8FD8-85E1-BCA2-E8D50863B603}|AllameDehkhoda.Presentation\\AllameDehkhoda.Presentation.csproj|solutionrelative:allamedehkhoda.presentation\\common\\datetimefuncs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DECF4FED-8FD8-85E1-BCA2-E8D50863B603}|AllameDehkhoda.Presentation\\AllameDehkhoda.Presentation.csproj|C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\allamedehkhoda.presentation\\frmmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DECF4FED-8FD8-85E1-BCA2-E8D50863B603}|AllameDehkhoda.Presentation\\AllameDehkhoda.Presentation.csproj|solutionrelative:allamedehkhoda.presentation\\frmmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -30,11 +46,61 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "AllameDehkhoda.Infrastructure\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "AllameDehkhoda.Infrastructure\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T10:26:07.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BookMessages.cs",
+              "DocumentMoniker": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Application\\Common\\BookMessages.cs",
+              "RelativeDocumentMoniker": "AllameDehkhoda.Application\\Common\\BookMessages.cs",
+              "ToolTip": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Application\\Common\\BookMessages.cs",
+              "RelativeToolTip": "AllameDehkhoda.Application\\Common\\BookMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T07:55:37.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UIHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\Common\\UIHelper.cs",
+              "RelativeDocumentMoniker": "AllameDehkhoda.Presentation\\Common\\UIHelper.cs",
+              "ToolTip": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\Common\\UIHelper.cs",
+              "RelativeToolTip": "AllameDehkhoda.Presentation\\Common\\UIHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T14:41:30.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DateTimeFuncs.cs",
+              "DocumentMoniker": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\Common\\DateTimeFuncs.cs",
+              "RelativeDocumentMoniker": "AllameDehkhoda.Presentation\\Common\\DateTimeFuncs.cs",
+              "ToolTip": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\Common\\DateTimeFuncs.cs",
+              "RelativeToolTip": "AllameDehkhoda.Presentation\\Common\\DateTimeFuncs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-19T14:41:28.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "FrmMember.cs",
               "DocumentMoniker": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\FrmMember.cs",
               "RelativeDocumentMoniker": "AllameDehkhoda.Presentation\\FrmMember.cs",
@@ -47,19 +113,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "FrmMember.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\FrmMember.cs",
               "RelativeDocumentMoniker": "AllameDehkhoda.Presentation\\FrmMember.cs",
               "ToolTip": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\FrmMember.cs [Design]",
               "RelativeToolTip": "AllameDehkhoda.Presentation\\FrmMember.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T14:35:49.228Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-19T14:35:49.228Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "FrmReport.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\FrmReport.cs",
               "RelativeDocumentMoniker": "AllameDehkhoda.Presentation\\FrmReport.cs",
@@ -70,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "FrmBorrow.cs",
               "DocumentMoniker": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\FrmBorrow.cs",
               "RelativeDocumentMoniker": "AllameDehkhoda.Presentation\\FrmBorrow.cs",
@@ -83,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "FrmBorrow.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Ali\\Desktop\\C#-Projrct\\AllameDehkhoda\\AllameDehkhoda.Presentation\\FrmBorrow.cs",
               "RelativeDocumentMoniker": "AllameDehkhoda.Presentation\\FrmBorrow.cs",
