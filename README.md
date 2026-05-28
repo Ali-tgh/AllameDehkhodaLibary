@@ -1,156 +1,127 @@
-# 📚 سیستم مدیریت کتابخانه علامه دهخدا
+# 📚 AllameDehkhoda Library Management System
 
-پروژه مدیریت کتابخانه با **WinForms** و **Entity Framework Core** و معماری **Onion Architecture**
-
----
-
-## ✨ قابلیت‌ها
-
-- مدیریت کتاب‌ها (افزودن، ویرایش، حذف، جستجو)
-- مدیریت اعضا (ثبت‌نام، ویرایش، حذف)
-- اعتبارسنجی ورودی‌ها
-- مدیریت امانت کتاب
-- گزارش‌گیری از امانت‌ها، اعضا و کتاب‌ها
-- امکان ذخیره گزارشات در اکسل
-- جستجوی پیشرفته
+سیستم مدیریت کتابخانه با معماری Clean Architecture
 
 ---
 
-## 🛠 تکنولوژی‌ها
+## 🏗️ معماری پروژه
 
-| تکنولوژی | نسخه |
-|---|---|
-| .NET | 10 |
-| Entity Framework Core | آخرین نسخه |
-| SQL Server | - |
-| Windows Forms | - |
-| معماری | Onion Architecture |
+```mermaid
+graph TD
+    subgraph Presentation["🖥️ Presentation (WinForms)"]
+        P1[Form1 - فرم اصلی]
+        P2[FrmBook - مدیریت کتاب]
+        P3[FrmMember - مدیریت اعضا]
+        P4[FrmBorrow - مدیریت امانت]
+        P5[FrmReport - گزارش‌گیری]
+    end
 
+    subgraph Application["⚙️ Application (Business Logic)"]
+        A1[BookService]
+        A2[BorrowService]
+        A3[MemberService]
+        A4[CategoryService]
+        A5[DTOs]
+        A6[ServiceResult]
+    end
 
+    subgraph Infrastructure["🗄️ Infrastructure (EF Core)"]
+        I1[AppDbContext]
+        I2[BookRepository]
+        I3[BorrowRepository]
+        I4[MemberRepository]
+        I5[CategoryRepository]
+        I6[Configs]
+    end
 
-## 📁 ساختار پروژه
+    subgraph Domain["🧩 Domain (Core)"]
+        D1[Book]
+        D2[Member]
+        D3[Borrow]
+        D4[Category]
+        D5[IRepository]
+        D6[IBookRepository]
+        D7[IBorrowRepository]
+        D8[IMemberRepository]
+        D9[ICategoryRepository]
+    end
+
+    Presentation --> Application
+    Application --> Domain
+    Infrastructure --> Domain
+    Presentation -.->|DI| Infrastructure
+```
+
+---
+
+## 📁 ساختار پوشه‌ها
+
+```
 AllameDehkhoda/
 │   AllameDehkhoda.slnx
 │
-├───AllameDehkhoda.Domain              # هسته اصلی - موجودیت‌ها و اینترفیس‌ها
-│   ├───Entites
-│   │       BaseEntity.cs
-│   │       Book.cs
-│   │       Borrow.cs
-│   │       Category.cs
-│   │       Member.cs
-│   │
-│   └───Interfaces
-│           IRepository.cs
-│           IBookRepository.cs
-│           IBorrowRepository.cs
-│           ICategoryRepository.cs
-│           IMemberRepository.cs
+├── AllameDehkhoda.Domain          # هسته اصلی
+│   ├── Entities/
+│   │   ├── BaseEntity.cs
+│   │   ├── Book.cs
+│   │   ├── Borrow.cs
+│   │   ├── Category.cs
+│   │   └── Member.cs
+│   └── Interfaces/
+│       ├── IRepository.cs
+│       ├── IBookRepository.cs
+│       ├── IBorrowRepository.cs
+│       ├── ICategoryRepository.cs
+│       └── IMemberRepository.cs
 │
-├───AllameDehkhoda.Application         # منطق کسب‌وکار - سرویس‌ها و DTO‌ها
-│   ├───DTO
-│   │       BookDTO.cs / BookReportDTO.cs
-│   │       BorrowDTO.cs / BorrowReportDTO.cs
-│   │       MemberDTO.cs / MemberReportDTO.cs
-│   │       CategoryDTO.cs
-│   │
-│   ├───Interfaces
-│   │       IBookService.cs
-│   │       IBorrowService.cs
-│   │       ICategoryService.cs
-│   │       IMemberService.cs
-│   │
-│   ├───Services
-│   │       BookService.cs
-│   │       BorrowService.cs
-│   │       CategoryService.cs
-│   │       MemberService.cs
-│   │
-│   └───Common
-│           ServiceResult.cs
-│           BookMessages.cs / BorrowMessage.cs / MemberMessage.cs
+├── AllameDehkhoda.Application     # منطق کسب‌وکار
+│   ├── DTO/
+│   ├── Interfaces/
+│   ├── Services/
+│   └── Common/
+│       └── ServiceResult.cs
 │
-├───AllameDehkhoda.Infrastructure      # پیاده‌سازی EF Core و ریپازیتوری‌ها
-│   ├───Data
-│   │       AppDbContext.cs
-│   │       AppDbContextFactory.cs
-│   │
-│   ├───Configs
-│   │       BookConfig.cs / BorrowConfig.cs
-│   │       MemberConfig.cs / CategoryConfig.cs
-│   │
-│   ├───Repository
-│   │       BaseRepository.cs
-│   │       BookRepository.cs / BorrowRepository.cs
-│   │       MemberRepository.cs / CategoryRepository.cs
-│   │
-│   └───Migrations
-│           20260509064512_init.cs
+├── AllameDehkhoda.Infrastructure  # EF Core
+│   ├── Data/
+│   │   ├── AppDbContext.cs
+│   │   └── AppDbContextFactory.cs
+│   ├── Configs/
+│   ├── Repository/
+│   └── Migrations/
 │
-├───AllameDehkhoda.Presentation        # رابط کاربری WinForms
-│   │   Program.cs
-│   │   Form1.cs           (فرم اصلی)
-│   │   FrmBook.cs         (مدیریت کتاب‌ها)
-│   │   FrmMember.cs       (مدیریت اعضا)
-│   │   FrmBorrow.cs       (مدیریت امانت)
-│   │   FrmReport.cs       (گزارش‌گیری)
-│   │
-│   └───Common
-│           DateTimeFuncs.cs
-│           SaveAsXML.cs
-│           UIHelper.cs
-│
-└───Icons                              # آیکون‌های رابط کاربری
+└── AllameDehkhoda.Presentation    # WinForms UI
+    ├── Program.cs
+    ├── Form1.cs
+    ├── FrmBook.cs
+    ├── FrmMember.cs
+    ├── FrmBorrow.cs
+    ├── FrmReport.cs
+    └── Common/
+        ├── DateTimeFuncs.cs
+        ├── SaveAsXML.cs
+        └── UIHelper.cs
+```
 
 ---
 
-## 🚀 نصب و اجرا
+## 🛠️ تکنولوژی‌ها
 
-### پیش‌نیازها
+| بخش | تکنولوژی |
+|-----|-----------|
+| زبان | C# / .NET |
+| UI | WinForms |
+| ORM | Entity Framework Core |
+| معماری | Clean Architecture |
+| دیتابیس | SQL Server |
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download)
-- SQL Server یا SQL Server Express
-- Visual Studio 2022 یا بالاتر
+---
 
-### مراحل نصب
-
-1. مخزن را کلون کنید:
+## 🚀 راه‌اندازی
 
 ```bash
-git clone https://github.com/Ali-tgh/AllameDehkhodaLibary.git
-cd AllameDehkhodaLibary
+# کلون پروژه
+git clone https://github.com/YOUR_USERNAME/AllameDehkhoda.git
+
+# اجرای Migration
+dotnet ef database update --project AllameDehkhoda.Infrastructure
 ```
-
-2. رشته اتصال به دیتابیس را در `AppDbContextFactory.cs` تنظیم کنید:
-
-```csharp
-"Server=YOUR_SERVER;Database=AllameDehkhodaDB;Trusted_Connection=True;"
-```
-
-3. Migration را اجرا کنید:
-
-```bash
-dotnet ef database update --project AllameDehkhoda.Infrastructure --startup-project AllameDehkhoda.Presentation
-```
-
-4. پروژه را Build و اجرا کنید.
-
----
-
-## 🏗 معماری
-
-پروژه بر اساس **Onion Architecture** طراحی شده است:
-Presentation  →  Application  →  Domain
-Infrastructure  →  Domain
-
-- **Domain**: هیچ وابستگی خارجی ندارد
-- **Application**: فقط به Domain وابسته است
-- **Infrastructure**: پیاده‌سازی اینترفیس‌های Domain
-- **Presentation**: لایه UI که از Application استفاده می‌کند
-
----
-
-## 👤 توسعه‌دهنده
-
-**علی تقی‌زاده** — [GitHub](https://github.com/Ali-tgh)
-
