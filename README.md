@@ -154,9 +154,3 @@ Infrastructure  →  Domain
 
 **علی تقی‌زاده** — [GitHub](https://github.com/Ali-tgh)
 
----
-
-## 📄 لایسنس
-
-این پروژه تحت لایسنس MIT منتشر شده است.
-
