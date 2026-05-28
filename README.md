@@ -171,8 +171,6 @@ public class ServiceResult<T> : ServiceResult
 اینترفیس‌های `Domain` را با **Entity Framework Core** پیاده‌سازی می‌کند.
 
 - **`AppDbContext`** — DbContext اصلی پروژه
-- **`AppDbContextFactory`** — برای اجرای `dotnet ef` از CLI
-- **Configs** — تنظیمات Fluent API (روابط، ایندکس‌ها، محدودیت‌ها)
 - **`BaseRepository<T>`** — پیاده‌سازی Generic از `IRepository<T>`
 
 ---
